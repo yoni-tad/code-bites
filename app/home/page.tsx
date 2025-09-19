@@ -1,6 +1,6 @@
 "use client"
 
-import Error from "@/components/Error";
+import ErrorWidget from "@/components/Error";
 import CodeCard from "@/components/home/CodeCard";
 import Feedback from "@/components/home/Feedback";
 import Loading from "@/components/Loading";
@@ -67,7 +67,7 @@ export default function Home() {
 
       <Feedback />
     </div>
-  </div> : <Error title="Failed to get today tip" btnText="Try again" btnAction={() => fetchTip()} />
+  </div> : <ErrorWidget title="Failed to get today tip" btnText="Try again" btnAction={() => fetchTip()} />
 
   }</>
 }
