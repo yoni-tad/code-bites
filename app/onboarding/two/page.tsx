@@ -16,14 +16,14 @@ export default function StepTwo() {
         )
     }
 
-    const languages = ['PHP', 'Python', 'React', 'Next Js', 'Angular']
+    const languages = ['PHP', 'Python', 'React Native', 'java', 'Typescript', 'Ruby on Rails', 'React', 'Angular', 'C++', 'Swift', 'C#', 'Node.js', 'SQL', 'JavaScript', 'Laravel', 'Kotlin', 'Vue.js']
 
     return <div className="flex flex-col h-screen">
         <div className="flex-1 space-y-6">
             <CustomNavigation active="two" />
             <div className="space-y-2">
                 <p className="text-2xl font-semibold text-start">Pick your topics</p>
-                <p className="text-2sm text-white/70">Tell us where you're at. and we'll tailor developer tips just for you</p>
+                <p className="text-2sm text-white/70">Or a random one - you've learning it next week anyway</p>
             </div>
             <div className="flex flex-wrap items-center justify-center ">
                 {languages.map((lang) => (
