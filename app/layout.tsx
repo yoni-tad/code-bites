@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Lato } from "next/font/google";
 import "./globals.css";
 import Background from "@/components/Background";
 import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,13 +33,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <Script src="https://telegram.org/js/telegram-web-app.js" strategy="beforeInteractive" />
+      </head>
       <body
         // className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         className={`${lato.variable} antialiased`}
       >
         <Toaster />
         <Background>
-          <div className="max-w-md p-4 min-h-screen w-full">
+          <div className="max-w-sm p-4 min-h-screen w-full">
             {children}
           </div>
         </Background>

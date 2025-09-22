@@ -7,11 +7,13 @@ export default function HomeLayout({ children }: Readonly<{ children: React.Reac
         <div className="pb-20">
             {children}
         </div>
-        <div className="fixed bottom-0 left-0 right-0">
-            <div className="flex justify-between items-center px-14 py-4 bg-neutral-900">
-                <BottomNav title="Today" icon={<Flame size={26} />} router="/home" active="home" />
-                <BottomNav title="Past Tips" icon={<Briefcase size={26} />} router="/home/past" active="past" />
-                <BottomNav title="Settings" icon={<Settings size={26} />} router="/home/settings" active="settings" />
+        <div className="flex justify-center w-full fixed bottom-2 left-0 right-0">
+            <div className="w-sm">
+                <div className="flex justify-around rounded-full items-center py-3 bg-neutral-900 w-full">
+                    <BottomNav title="Today" icon={<Flame size={20} />} router="/home" active="home" />
+                    <BottomNav title="Past Tips" icon={<Briefcase size={20} />} router="/home/past" active="past" />
+                    <BottomNav title="Settings" icon={<Settings size={20} />} router="/home/settings" active="settings" />
+                </div>
             </div>
         </div>
     </div>

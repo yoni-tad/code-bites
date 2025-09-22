@@ -16,6 +16,6 @@ export default function BottomNav({ title, icon, router, active }: NavProps) {
 
     return <div className={`flex flex-col items-center gap-1 ${current ? 'text-lime-400' : 'text-white/50'}`} onClick={() => route.push(router)}>
         {icon}
-        <p className={`text-sm`}>{title}</p>
+        <p className={`text-xs`}>{title}</p>
     </div>
 }
